@@ -1,0 +1,19 @@
+
+> value<-c(90,50, 70, 80, 70, 60, 20, 30, 80, 90, 20)
+
+> a<-sort(unique(value))
+
+> print(a)
+[1] 20 30 50 60 70 80 90
+
+> h<-a[length(a)-1]
+
+> print(h)
+[1] 80
+
+> g<-a[2]
+
+> print(g)
+[1] 30
+
+> sink(file=NULL)

@@ -1,0 +1,27 @@
+
+> values <- c(90, 50, 70, 80, 70, 60, 20, 30, 80, 90, 20)
+
+> mean_value <- mean(values)
+
+> print(paste("Mean:", mean_value))
+[1] "Mean: 60"
+
+> median_value <- median(values)
+
+> print(paste("Median:", median_value))
+[1] "Median: 70"
+
+> get_mode <- function(v) {
++   uniq_v <- unique(v)
++   print(paste("unique:",uniq_v))
++   uniq_v[which.max(tabulate(match(v, uniq_v)))]
++ }
+
+> mode_value <- get_mode(values)
+[1] "unique: 90" "unique: 50" "unique: 70" "unique: 80" "unique: 60" "unique: 20"
+[7] "unique: 30"
+
+> print(paste("Mode:", mode_value))
+[1] "Mode: 90"
+
+> sink(file=NULL)
